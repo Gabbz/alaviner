@@ -1,7 +1,7 @@
 let cheerio = require('cheerio');
 let jsonframe = require('jsonframe-cheerio');
 
-let $ = cheerio.load('our html page url here');
+let $ = cheerio.load('scrape.html');
 jsonframe($); // initializes the plugin
 
 var frame = {
