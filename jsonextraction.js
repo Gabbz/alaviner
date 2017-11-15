@@ -1,12 +1,12 @@
-let cheerio = require('cheerio')
-let fs = require("fs")
-let $ = cheerio.load(fs.readFileSync("./scrape.html", "utf8"))
+let cheerio = require('cheerio');
+let fs = require("fs");
+let $ = cheerio.load(fs.readFileSync("./scrape.html", "utf8"));
 
 var companiesList = [];
 
 // For each .item, we add all the structure of a company to the companiesList array
 // Don't try to understand what follows because we will do it differently.
-$('.list.items .item').each(function(index, element){
+/*$('.list.items .item').each(function(index, element){
 	companiesList[index] = {};
 	var header = $(element).find('.header');
 	companiesList[index]['name'] = $(header).find('[itemprop=name]').text();
@@ -19,6 +19,8 @@ $('.list.items .item').each(function(index, element){
 	companiesList[index]['contact']['employee']['name'] = $(contact).find('[itemprop=employeeName]').text();
 	companiesList[index]['contact']['employee']['jobTitle'] = $(contact).find('[itemprop=employeeJobTitle]').text();
 	companiesList[index]['contact']['employee']['email'] = $(contact).find('[itemprop=email]').text();
-});
+});*/
 
 console.log(companiesList); // Output the data in the terminal
+
+console.log(fs.readFileSync("./scrape.html", "utf8"));
