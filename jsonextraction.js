@@ -26,7 +26,7 @@ var companiesList = [];
 
 
 $('.list.items .item a').each(function(index, element){
-	companiesList.push( {href: $(element).attr('href') } );
+	companiesList.push( { name: $(element).text(), href: $(element).attr('href') } );
 });
 
 console.log(companiesList); // Output the data in the terminal
