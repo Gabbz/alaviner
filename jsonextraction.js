@@ -26,9 +26,7 @@ var companiesList = [];
 
 
 $('.list.items .item a').each(function(index, element){
-	companiesList.push( { name: $(element).text(), href: $(element).attr('href') } );
+	companiesList.push( { name: $(element).text().trim(), href: $(element).attr('href').trim() } );
 });
 
 console.log(companiesList); // Output the data in the terminal
-
-console.log(fs.readFileSync("./scrape.html", "utf8"));
