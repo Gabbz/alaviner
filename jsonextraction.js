@@ -1,5 +1,5 @@
 let cheerio = require('cheerio')
-let $ = cheerio.load('./scrape.html')
+let $ = cheerio.load('scrape.html')
 
 var companiesList = [];
 
