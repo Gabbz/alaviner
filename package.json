@@ -2,7 +2,11 @@
     "name": "alaviner.se",
     "version": "0.0.1",
     "private": true,
+    "scripts": {
+        "start": "nodemon ./app.js & nodemon ./scraper/scraper.js"
+    },
     "dependencies": {
-        "express": "^4.16.2"
+        "express": "^4.16.2",
+        "node-webcrawler": "^0.8.0"
     }
 }
